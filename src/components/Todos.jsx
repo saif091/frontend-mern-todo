@@ -11,7 +11,7 @@ const Todos = () => {
     const dispatch = useDispatch()
     const todos = useSelector(state => state.todos.todos)
     const handleDelte = (id) => {
-        axios.delete('http://localhost:4000/delete/' + id)
+        axios.delete('https://mern-reduxtoolkit-api.onrender.com/delete/' + id)
             .then(res => {
                 dispatch(deleteTodo({ id }))
             }).catch(err => console.log(err))
