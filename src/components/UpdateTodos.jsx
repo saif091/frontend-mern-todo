@@ -15,7 +15,7 @@ const UpdateTodos = () => {
     const [discription, setDiscription] = useState(todo.discription);
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.put('http://localhost:4000/update/' + id, { name, discription })
+        axios.put('https://mern-reduxtoolkit-api.onrender.com/update/' + id, { name, discription })
             .then(res => {
                 dispatch(updateTodo({ id, name, discription }))
                 console.log(res)
