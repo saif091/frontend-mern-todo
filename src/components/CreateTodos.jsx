@@ -11,7 +11,7 @@ const CreateTodos = () => {
     const [discription, setDiscription] = useState();
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:4000/create', { name, discription })
+        axios.post('https://mern-reduxtoolkit-api.onrender.com/create/', { name, discription })
             .then(res => {
                 dispatch(addTodo(res.data))
                 console.log(res)
